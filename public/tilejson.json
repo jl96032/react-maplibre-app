@@ -1,0 +1,16 @@
+{
+  "tilejson": "1.0.0",
+  "name": "Pune 1 to 16",
+  "description": "Made with Maperitive",
+  "attribution": "Map data © OpenStreetMap contributors",
+  "tiles": [
+      "maps/osm/{z}/{x}/{y}.vector.pbf"
+  ],
+  "minzoom": 1,
+  "maxzoom": 17,
+  "center": [
+      55.666742,
+      12.549133,
+      14
+  ]
+}

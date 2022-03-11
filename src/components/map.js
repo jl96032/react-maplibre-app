@@ -5,8 +5,9 @@ import './map.css';
 export default function Map(){
   const mapContainer = useRef(null);
   const map = useRef(null);
-  const [lng] = useState(139.753);
-  const [lat] = useState(35.6844);
+  //copenhagen 12.549133, 55.666742
+  const [lng] = useState(12.549133);
+  const [lat] = useState(55.666742);
   const [zoom] = useState(14);
   const [API_KEY] = useState('1JIfeS9SHvVJt8fORsPr');
 
@@ -14,13 +15,38 @@ export default function Map(){
     if (map.current) return;
     map.current = new maplibregl.Map({
       container: mapContainer.current,
-      style: `https://api.maptiler.com/maps/streets/style.json?key=${API_KEY}`,
+    //  style: `https://api.maptiler.com/maps/streets/style.json?key=${API_KEY}`,
+      style: "./osm_liberty.json",
       center: [lng, lat],
       zoom: zoom
     });
     map.current.addControl(new maplibregl.NavigationControl(), 'top-right');
+/*
+    map.current.on('load', function () {
+      map.current.addSource('osm', {
+        'type': 'vector',
+     //   "tiles": ["http://localhost:8080/maps/bonn/{z}/{x}/{y}.vector.pbf?"],
+        "tiles": ["https://localhost:8080/maps/osm/{z}/{x}/{y}.vector.pbf?"],
+        "tolerance": 0
+      });
+    
+   /*   map.current.addLayer({
+        // [Perry] You could try with main_roads or lakes for id and source-layer
+        "id": "roads",
+       // "source": "bonn",
+        "source": "osm",
+        "source-layer": "roads",
+        "type": "line",
+        "paint": {
+          "line-color": "#FF0000",
+          "line-width": 1
+        }
+      });*/
+  //  });*/
     
   });
+
+  
   
   return (
     <div className="map-wrap">

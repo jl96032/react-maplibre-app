@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Map from './components/map.js';
+import TileJson from './routers/tilejson.js';
+import About from './routers/about.js';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Routes> 
+      <Route path="/" element={<App/>} />
+      <Route path="/style" element={<TileJson/>} />
+      <Route path="/about" element={<About/>} />
+    </Routes>
+  </BrowserRouter>,
   document.getElementById('root')
 );
 

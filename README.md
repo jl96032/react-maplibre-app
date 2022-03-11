@@ -1,4 +1,14 @@
 # Getting Started with Create React App
+Project is followed as this:
+[Display MapLibre GL JS map using React JS](https://documentation.maptiler.com/hc/en-us/articles/4405444890897-How-to-display-MapLibre-GL-JS-map-using-React-JS)
+
+#need to get localhost certification 
+brew install mkcert
+mkcert -install #require password
+mkcert localhost # will create certificate at "./localhost.pem" and the key at "./localhost-key.pem"
+update start script in package.json
+    "start": "HTTPS=true SSL_CRT_FILE=./localhost.pem SSL_KEY_FILE=./localhost-key.pem react-scripts start",
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
