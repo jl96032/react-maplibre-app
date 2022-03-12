@@ -16,7 +16,7 @@ export default function Map(){
     map.current = new maplibregl.Map({
       container: mapContainer.current,
     //  style: `https://api.maptiler.com/maps/streets/style.json?key=${API_KEY}`,
-      style: "./osm_liberty.json",
+      style: "https://master.d34xthyk9j1ki2.amplifyapp.com/osm_liberty.json",
       center: [lng, lat],
       zoom: zoom
     });
