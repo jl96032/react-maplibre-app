@@ -9,7 +9,7 @@
   "sources": {
     "syuu0ypif": {
       "type": "vector",
-      "tiles": ["https://lb-tegola-511640286.eu-north-1.elb.amazonaws.com/maps/osm/{z}/{x}/{y}.vector.pbf?"],
+      "tiles": ["https://tiles.enirotest.com/maps/osm/{z}/{x}/{y}.vector.pbf?"],
       "minZoom": 0,
       "maxZoom": 20
     }
