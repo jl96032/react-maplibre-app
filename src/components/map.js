@@ -8,7 +8,7 @@ export default function Map(){
   //copenhagen 12.549133, 55.666742
   const [lng] = useState(12.549133);
   const [lat] = useState(55.666742);
-  const [zoom] = useState(14);
+  const [zoom] = useState(17);
   const [API_KEY] = useState('1JIfeS9SHvVJt8fORsPr');
 
   useEffect(() => {
@@ -18,7 +18,9 @@ export default function Map(){
     //  style: `https://api.maptiler.com/maps/streets/style.json?key=${API_KEY}`,
   //    style: "https://github.com/jl96032/react-maplibre-app/blob/master/public/osm_liberty.json?",
       //  style: "http://localhost/osm_liberty-localhost.json",
-      style: "osm_liberty.json",
+   //   style: "http://localhost:3001/osm_liberty.json",
+     // style: "https://master.d34xthyk9j1ki2.amplifyapp.com/osm_liberty.json",
+      style: "./osm_liberty.json",
       center: [lng, lat],
       zoom: zoom
     });
