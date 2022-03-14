@@ -17,7 +17,7 @@ function App() {
 
   return(
     <div>
-      <h1>OSM -> Postgresql -> Tegola -> MapLibreJS</h1>
+      <h1>"MapLibreJS"</h1>
         <nav>
           <ul>
             <li><Link to="/osm_liberty.json">Style</Link></li>
