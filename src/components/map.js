@@ -18,8 +18,7 @@ export default function Map(){
     //  style: `https://api.maptiler.com/maps/streets/style.json?key=${API_KEY}`,
   //    style: "https://github.com/jl96032/react-maplibre-app/blob/master/public/osm_liberty.json?",
       //  style: "http://localhost/osm_liberty-localhost.json",
-      style: "./osm_liberty.json",
-    //  style: "https://tiles.enirotest.com/osm_liberty.json",
+      style: "osm_liberty.json",
       center: [lng, lat],
       zoom: zoom
     });
